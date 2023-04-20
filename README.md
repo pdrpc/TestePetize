@@ -11,7 +11,7 @@ git clone https://github.com/pdrpc/TestePetize.git
 ```
  2. Install the Node.js and Angular dependencies.
 ```
-cd TestePetize/
+cd ../TestePetize
 npm install
 ```
  4. Then use the Node Packge Manager to run the application.
