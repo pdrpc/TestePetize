@@ -12,8 +12,6 @@
                 </button>
             </mat-form-field>
             <button mat-button class="button-voltar" (click)="back()">Voltar</button>
-            <!-- <input id="username" class="username" matInput placeholder="Search User" [(ngModel)]="username" [ngModelOptions]="{ standalone: true }" name="username" (keydown.enter)="searchUser()">
-            <button mat-raised-button color="primary" class="ml-2" type="button" (click)="searchUser()" style="background-color: #8c19d2;">Search</button> -->
         </div>
     </div>
     <div id="body-container" class="container">
@@ -52,7 +50,7 @@
                             </li>
                             <li *ngIf="user.blog !== null && user.blog !== ''">
                                 <i class="fa-solid fa-link fa-lg"></i>
-                                <span><a href="{{user.blog}}">{{user.blog}}</a></span>
+                                <span><a target="blank" href="{{user.blog}}">{{user.blog}}</a></span>
                             </li>
                             <li *ngIf="user.twitter_username !== null && user.twitter_username !== ''">
                                 <i class="fa-brands fa-twitter fa-lg"></i>

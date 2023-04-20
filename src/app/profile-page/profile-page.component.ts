@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { User } from "../models/user.model";
 import { GithubService } from "../services/github.service";
 import { ActivatedRoute, Router } from '@angular/router';
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-profile-page',
@@ -17,7 +18,8 @@ export class ProfilePageComponent implements OnInit {
   constructor(
     private githubService: GithubService, 
     private route: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private _snackBar: MatSnackBar
   ) {}
 
   ngOnInit(): void {
@@ -48,7 +50,9 @@ export class ProfilePageComponent implements OnInit {
       window.open(`mailto:${this.user.email}`);
     }
     else{
-      alert("O usuário não adicionou um email.")
+      this._snackBar.open('Este usuário não indicou um email de contato', '', {
+        duration: 5000
+      });
     }
   }
 
