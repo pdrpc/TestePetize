@@ -1,0 +1,144 @@
+#main-container {
+    height: 99vh;
+}
+
+#header-container {
+    display: flex;
+    margin-inline: 7rem;
+    justify-content: space-between;
+    align-items: center;
+    height: 15vh;
+}
+
+#body-container {
+    display: flex;
+    margin-inline: 7rem;
+    height: 85vh;
+}
+
+#repo-container {
+    display: flex;
+    width: -webkit-fill-available;
+}
+
+#search-span {
+    color: #0069ca;
+}
+
+#dev-span {
+    color: #8c19d2;
+}
+
+.search-form-field {
+    width: -webkit-fill-available;
+}
+
+.username {
+    height: 36px;
+    width: 700px;
+    margin-right: 15px;
+}
+
+.search {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+}
+
+button.button-voltar {
+    color: #FFF;
+    background-color: #8c19d2;
+    height: 56px;
+    width: 200px;
+    border-radius: 32px;
+}
+
+.repo-info {
+    display: flex;
+    min-width: -webkit-fill-available;
+}
+
+.repo-card {
+    display: flex;
+    flex-direction: column;
+    min-width: -webkit-fill-available;
+    padding-inline: 30px;
+    overflow: auto;
+}
+
+.card {
+    margin: 0px 0px 10px 0px;
+}
+
+.repo-card-footer {
+    display: flex;
+    flex-direction: row;
+    margin: 15px;
+}
+
+.stargazer {
+    margin-right: 15px;
+}
+
+.user-info {
+    min-width: 400px;
+}
+
+.mat-mdc-card-title-group {
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.mask {
+    border-radius: 50% !important;
+    overflow: hidden;
+    margin-right: 15px;
+}
+
+.logo {
+    font-size: 50px;
+    font-weight: 300;
+}
+
+button.contato {
+    color: #FFF;
+    background-color: #8c19d2;
+    min-width: -webkit-fill-available;
+    border-radius: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0px 0px 0px 15px;
+}
+
+li {
+    margin-top: 10px;
+}
+
+i {
+    margin-right: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: #8c19d2;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 20px
+}
+
+ ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+ ::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}

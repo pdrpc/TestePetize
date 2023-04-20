@@ -1,0 +1,18 @@
+<div id="main-container" class="container d-flex justify-content-center align-items-center vh-100">
+    <div class="body-container container d-flex justify-content-center align-items-center vh-100">
+        <div class="col-12col-md-8 col-lg-6 mat-typography">
+            <h1>
+                <span id="search-span">Search</span>
+                <span id="dev-span"> d_evs </span>
+            </h1>
+        </div>
+    </div>
+    <div class="body-container container d-flex justify-content-center align-items-center vh-100">
+        <div class="col-12 col-md-8 col-lg-6">
+            <form class="form-inline" (ngSubmit)="searchUser()">
+                <input id="username" matInput placeholder="Search User" [(ngModel)]="username" [ngModelOptions]="{ standalone: true }" name="username">
+                <button mat-raised-button color="primary" class="ml-2" type="button" (click)="searchUser()">Search</button>
+            </form>
+        </div>
+    </div>
+</div>

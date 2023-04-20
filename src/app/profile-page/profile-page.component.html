@@ -1,0 +1,96 @@
+<div id="main-container">
+    <div id="header-container" class="container">
+        <h1 class="logo">
+            <span id="search-span">Search</span>
+            <span id="dev-span"> d_evs </span>
+        </h1>
+        <div class="search">
+            <mat-form-field class="search-form-field">
+                <input id="username" class="username" matInput placeholder="Search User" type="text" [(ngModel)]="username" [ngModelOptions]="{ standalone: true }" name="username" (keydown.enter)="searchUser()">
+                <button matSuffix mat-icon-button aria-label="Clear" (click)="searchUser()">
+                    <mat-icon>search</mat-icon>
+                </button>
+            </mat-form-field>
+            <button mat-button class="button-voltar" (click)="back()">Voltar</button>
+            <!-- <input id="username" class="username" matInput placeholder="Search User" [(ngModel)]="username" [ngModelOptions]="{ standalone: true }" name="username" (keydown.enter)="searchUser()">
+            <button mat-raised-button color="primary" class="ml-2" type="button" (click)="searchUser()" style="background-color: #8c19d2;">Search</button> -->
+        </div>
+    </div>
+    <div id="body-container" class="container">
+        <div class="user-info">
+            <div class="user-card">
+                <mat-card style="max-width: 400px; color: #1b1b1b;">
+                    <mat-card-header>
+                        <mat-card-title-group>
+                            <img class="mask" mat-card-sm-image src="{{user.avatar_url}}">
+                            <mat-card-title>{{user.name}}</mat-card-title>
+                            <mat-card-subtitle>{{user.login}}</mat-card-subtitle>
+                        </mat-card-title-group>
+                    </mat-card-header>
+                    <mat-card-content>
+                        {{user.bio}}
+                        <ul>
+                            <li *ngIf="user.followers !== null">
+                                <i class="fa-solid fa-users fa-lg"></i>
+                                <span>{{user.followers}} Seguidores</span>
+                            </li>
+                            <li *ngIf="user.following !== null">
+                                <i class="fa-solid fa-heart fa-lg"></i>
+                                <span>{{user.following}} Seguindo</span>
+                            </li>
+                            <li *ngIf="user.company !== null && user.company !== ''">
+                                <i class="fa-solid fa-building fa-lg"></i>
+                                <span>{{user.company}}</span>
+                            </li>
+                            <li *ngIf="user.location !== null && user.location !== ''">
+                                <i class="fa-solid fa-location-dot fa-lg"></i>
+                                <span>{{user.location}}</span>
+                            </li>
+                            <li *ngIf="user.email !== null && user.email !== ''">
+                                <i class="fa-solid fa-envelope fa-lg"></i>
+                                <span>{{user.email}}</span>
+                            </li>
+                            <li *ngIf="user.blog !== null && user.blog !== ''">
+                                <i class="fa-solid fa-link fa-lg"></i>
+                                <span><a href="{{user.blog}}">{{user.blog}}</a></span>
+                            </li>
+                            <li *ngIf="user.twitter_username !== null && user.twitter_username !== ''">
+                                <i class="fa-brands fa-twitter fa-lg"></i>
+                                <span>{{user.twitter_username}}</span>
+                            </li>
+                        </ul>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <button class="contato" mat-button (click)="sendEmail()">Contato</button>
+                    </mat-card-actions>
+                </mat-card>
+            </div>
+        </div>
+        <div id="repo-container">
+            <div class="repo-info">
+                <div class="repo-card">
+                    <mat-card class="card" *ngFor="let repo of sortedRepositories">
+                        <mat-card-header>
+                            <mat-card-title>
+                                <a href="{{repo.html_url}}" target="_blank">{{repo.name}}</a>
+                            </mat-card-title>
+                        </mat-card-header>
+                        <mat-card-content>
+                            {{repo.description}}
+                        </mat-card-content>
+                        <mat-action-list class="repo-card-footer">
+                            <div class="stargazer">
+                                <i class="fa-solid fa-star fa-lg"></i>
+                                <span>{{repo.stargazers_count}} Stars</span>
+                            </div>
+                            <div class="updated">
+                                <i class="fa-solid fa-arrows-rotate fa-lg"></i>
+                                <span>{{repo.updated_at | date}}</span>
+                            </div>
+                        </mat-action-list>
+                    </mat-card>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
