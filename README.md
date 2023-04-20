@@ -1,27 +1,30 @@
 # TestePetize
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.6.
+This repository contains the source code for a simple web application built with Angular and Node.js. The application allows the user to search for developers in the github platform and shows the repositories of that developer.
 
-## Development server
+### Installation
+To install the application, you'll need to have Node.js and Angular CLI installed on your computer. Once you have these prerequisites installed, you can follow these steps:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+ 1. Clone this repository to your local machine.
+```
+git clone https://github.com/pdrpc/TestePetize.git
+```
+ 2. Install the Node.js and Angular dependencies.
+```
+cd TestePetize/
+npm install
+```
+ 4. Then use the Node Packge Manager to run the application.
+```
+cd ../TestePetize
+npm run start
+```
 
-## Code scaffolding
+### Usage
+Once you have the application installed, you can open it in your web browser at http://localhost:4200/. From there, you can use the search bar to search for developers and explore their repositories.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Contributing
+If you'd like to contribute to this project, feel free to submit a pull request with your changes. Before submitting a pull request, please make sure to follow the existing code style and write tests for any new functionality.
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### License
+This project is licensed under the MIT License - see the LICENSE file for details.
